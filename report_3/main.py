@@ -1,5 +1,6 @@
-import os
-from pathlib import Path
-
-file_name = "lubie_plpacki.tex"
-print(os.path.join(os.path.dirname(__file__), "data/", file_name))
+import sys, os
+sys.path.append("/report_generator/report_3")
+import Generator.Generator
+print(os.path.join("report_generator/report_3/data/test/", "rura.csv"))
+rura_data = Generator.Generator("report_3/data/test/", "rura.csv") # type: ignore
+print(rura_data.data_set)
